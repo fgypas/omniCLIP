@@ -465,12 +465,9 @@ def parsingCLIP(args):
 
 
 def main():
-    version = {}
-    with open("version.py") as fp:
-        exec(fp.read(), version)
 
     parser = argparse.ArgumentParser(prog='PROG', description='omniCLIP - probabilistic identification of protein-RNA interactions from CLIP-seq data')
-    parser.add_argument('--version', action='version', version=version['__version__'])
+    parser.add_argument('--version', action='version', version=__version__)
     subparsers = parser.add_subparsers(title='subcommands', help='sub-command help', dest='command')
 
     # Create the parser for the generateDB command
