@@ -811,7 +811,7 @@ def ParallelGetMostLikelyPathForGene(data):
     Ix = GetModelIx(Sequences_per_gene, Type='all')
 
     if np.sum(Ix) == 0:
-        CurrPath = 2 * np.ones((0, Ix.shape[0]), dtype=np.int)
+        CurrPath = 2 * np.ones((0, Ix.shape[0]), dtype=np.int64)
         return [gene, CurrPath, 0]
 
     if EmissionParameters['filter_snps']:

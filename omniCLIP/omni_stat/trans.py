@@ -175,8 +175,8 @@ def FitTransistionParametersSimple(Sequences, Background, TransitionParameters,
 
     # Create Y
     Y = np.hstack(
-        (np.ones((1, len_same), dtype=np.int),
-         np.zeros((1, len_other), dtype=np.int)))[0, :].T
+        (np.ones((1, len_same), dtype=np.int64),
+         np.zeros((1, len_other), dtype=np.int64)))[0, :].T
     classes = np.unique(Y)
 
     get_mem_usage(verbosity, msg='Fitting transition parameters: III')

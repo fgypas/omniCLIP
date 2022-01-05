@@ -37,7 +37,7 @@ def viterbi(np.ndarray[DTYPE_t, ndim=2] EmmisionProbabilites, np.ndarray[DTYPE_t
     cdef int [:,:] TraceBack
     cdef unsigned int SeqLen = EmmisionProbabilites.shape[1]
     cdef unsigned int NrOfStates = EmmisionProbabilites.shape[0]
-    cdef np.ndarray[np.int_t, ndim=1] Path = np.zeros(SeqLen, dtype=np.int)
+    cdef np.ndarray[np.int_t, ndim=1] Path = np.zeros(SeqLen, dtype=np.int64)
     cdef double [:,:] V
     cdef double CurrMax, Temp
     cdef LogLik = np.float64
