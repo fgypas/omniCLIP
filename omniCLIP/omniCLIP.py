@@ -381,7 +381,7 @@ def add_pseudo_gene(Sequences, Background, NewPaths, PriorMatrix):
                 for gene in Sequences]
 
     random_gen = np.random.choice(np.arange(len(gen_lens)), 1,
-                                  p=np.array(gen_lens)/np.float(sum(gen_lens)))
+                                  p=np.array(gen_lens)/np.float64(sum(gen_lens)))
 
     if len(random_gen) == 1:
         gene_name = list(Sequences.keys())[random_gen[0]]

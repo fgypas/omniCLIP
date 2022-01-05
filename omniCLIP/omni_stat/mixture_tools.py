@@ -194,7 +194,7 @@ def Parallel_estimate_single_mixture_params(args):
             # Get number of positions that are used. (In case there are fewer entries that rand_sample_size in counts)
             rand_size = min(rand_sample_size, curr_counts.shape[1])
             for i in zero_ix:
-                random_ix = np.random.choice(curr_counts.shape[1], rand_size, p=(curr_nr_of_counts[0, :] / np.float(np.sum(curr_nr_of_counts[0, :]))))
+                random_ix = np.random.choice(curr_counts.shape[1], rand_size, p=(curr_nr_of_counts[0, :] / np.float64(np.sum(curr_nr_of_counts[0, :]))))
                 curr_counts = np.hstack([curr_counts, curr_counts[:, random_ix]])
                 curr_nr_of_counts = np.hstack([curr_nr_of_counts, np.ones((1, rand_size))])
                 temp_array = np.zeros((normalised_scores.shape[0], rand_size))

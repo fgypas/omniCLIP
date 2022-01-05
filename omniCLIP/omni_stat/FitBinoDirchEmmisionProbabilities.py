@@ -133,7 +133,7 @@ def MD_f_prime_joint_vect_unif(x, *args):
     NrOfReplicates = Counts.shape[0] // tracks_per_rep
 
     # Prepare the return variable
-    LogLikelihood = np.zeros_like(x, dtype=np.float)
+    LogLikelihood = np.zeros_like(x, dtype=np.float64)
 
     # Compute the likelihood
     curr_k = Counts[0:tracks_per_rep, :]
