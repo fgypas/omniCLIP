@@ -41,7 +41,7 @@ def parsing_argparse(args):
     params = {arg: getattr(args, arg) for arg in named_args}
 
     # Verifying the validity of the args
-    verifying_args(params)
+    # verifying_args(params)
 
     # Printing args if verbosity
     if params['verbosity'] > 1:
